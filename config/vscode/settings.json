@@ -1,0 +1,27 @@
+{
+    "editor.formatOnSave": true,
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "zsh"
+        }
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.analysis.typeCheckingMode": "basic",
+    "ruff.lint.args": [
+        "--config=pyproject.toml"
+    ],
+    "isort.args": [
+        "--profile",
+        "black"
+    ]
+}

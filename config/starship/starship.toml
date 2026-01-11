@@ -1,0 +1,26 @@
+# Starship config
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[package]
+disabled = true
+
+[python]
+symbol = "🐍 "
+
+[nodejs]
+symbol = "⬢ "
+
+[golang]
+symbol = "🐹 "
+
+[rust]
+symbol = "🦀 "
+
+[git_branch]
+symbol = "🌱 "
+
+[git_status]
+symbol = "⚡ "
