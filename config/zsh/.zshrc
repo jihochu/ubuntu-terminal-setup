@@ -19,13 +19,12 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light romkatv/powerlevel10k
-zinit light juegunn/fzf
-zinit light juegunn/fzf-tab
 
-# FZF
-if command -v fzf >/dev/null; then
-  source <(fzf --zsh)
+if [ ! -d "$HOME/.fzf" ]; then
+    git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
+    $HOME/.fzf/install --key-bindings --completion --update-rc
 fi
+[ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 
 # --- Starship ---
 if command -v starship >/dev/null; then
@@ -33,6 +32,7 @@ if command -v starship >/dev/null; then
 fi
 
 # --- Config ---
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
 SAVEHIST=50000
 setopt appendhistory

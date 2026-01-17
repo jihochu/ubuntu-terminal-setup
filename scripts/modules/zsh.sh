@@ -58,4 +58,16 @@ else
   log_error "Missing source starship.toml at $SOURCE_STARSHIP"
 fi
 
+# Powerlevel10k Config
+CONFIG_P10K="$HOME/.p10k.zsh"
+SOURCE_P10K="$ROOT_DIR/config/zsh/.p10k.zsh"
+
+if [ -f "$SOURCE_P10K" ]; then
+  backup_file "$CONFIG_P10K"
+  log_info "Installing .p10k.zsh..."
+  cp "$SOURCE_P10K" "$CONFIG_P10K"
+else
+  log_error "Missing source .p10k.zsh at $SOURCE_P10K"
+fi
+
 log_success "ZSH setup complete."
