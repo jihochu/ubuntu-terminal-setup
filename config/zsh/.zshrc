@@ -18,6 +18,9 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
+zinit light romkatv/powerlevel10k
+zinit light juegunn/fzf
+zinit light juegunn/fzf-tab
 
 # FZF
 if command -v fzf >/dev/null; then
